@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <nav>
+        <h2 class="logo"><a href="#" id="logo">
+          My TODOs
+        </a> 
+        </h2>
+        <div class="nav-list">
+            <ul>
+                <li><a href="https://piyushchittora.github.io/My-Portfolio/" target="_blank">About Me</a></li>
+                <li><a href="https://piyushchittora.github.io/My-Portfolio/#work"  target="_blank">My other works</a></li>
+                <li><a href="https://piyushchittora.github.io/My-Portfolio/#Contact"  target="_blank">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="heading">To-Do list</h1>
+        <div id="input-form">
+            <div class="input-boxes">
+                <input type="text" class="input" id="task" placeholder="Task" required>
+                <input type="text" class="input" id="deadline" placeholder="Deadline" required>
+            </div>
+            <div class="input-btns">
+                <button class="btn" id="add">Add</button>
+                <div class="select">
+                    <select name="todos" id="filter">
+                        <option value="all" class="select">All</option>
+                        <option value="checked" class="select">Checked</option>
+                        <option value="unchecked" class="select">Unchecked</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="todocontainer">
+            <h1 class="heading">
+                Your Current TODOs
+            </h1>
+            <ul class="todohead">
+                <div class="row">
+                    <li class="todoitems">Task</li>
+                    <li class="todoitems">Deadline</li>
+                    <li class="todoitems">Action</li>
+                </div>
+            </ul>
+            <ul id="todolist"></ul>
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="copy" id="copy">
+            &copy; Created by<a
+                href="https://www.instagram.com/chittora_piyush/" id="special">@chittora_piyush</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

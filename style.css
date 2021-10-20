@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Exa", sans-serif;
+}
+body {
+  background-color: #0b0c10;
+  color: #66fcf1;
+  font-family: "Lexend Exa", sans-serif;
+}
+nav {
+    z-index: 1;
+  background-color: #0b0c10;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 8px #1f2833;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo a{
+  font-size: 1.7rem;
+  padding: 0 15px;
+  text-decoration: none;
+  color: #66fcf1;
+  cursor: pointer;
+}
+a {
+  padding: 0 15px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #66fcf1;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+a:hover {
+  font-size: 1.2rem;
+  border-bottom: 0.1rem solid #66fcf1;
+}
+.logo a:hover{
+  font-size: 1.7rem;
+  border: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 20px;
+}
+.heading {
+  font-size: 2.3rem;
+  margin: 10px;
+}
+#input-form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"]{
+  color: #c5c6c7;
+  width: 30vw;
+  background-color: #1f2833;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5px;
+  border: solid 2px #45a29e;
+  border-radius: 5px;
+  transition: ease all 0.3s;
+}
+input[type="text"]:focus {
+  border: solid 2px #0b0c10;
+  background-color: #0b0c10;
+  box-shadow: 0 0 10px #45a29e;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  appearance:none;
+  border: none;
+
+  color: #66fcf1;
+  background-color: #0b0c10;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: ease all 0.4s;
+  width:auto;
+  padding: 10px;
+}
+.select::after{
+  content:"\25BC";
+  position:relative;
+  top: 0;
+  right: 10px;
+  color: #66fcf1;
+  background-color: #0b0c10;
+  cursor: pointer;
+}
+.select{
+    float: right;
+    margin: 5px;
+    width: auto;
+    transition: ease all 0.4s;
+    color: #66fcf1;
+    background-color: #0b0c10;
+    border:solid 2px #45a29e;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.btn {
+  color: #0b0c10;
+  background-color: #66fcf1;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  width: 10vw;
+  font-size: 1rem;
+  transition: ease all 0.4s;
+  cursor: pointer;
+}
+.btn-del {
+  color: #66fcf1;
+  background-color: #0b0c10;
+  border: solid 1.5px #66fcf1;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 10px;
+  width: auto;
+  font-size: 1rem;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+.btn-check {
+  color: #0b0c10;
+  background-color: #66fcf1;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  margin: 0 10px;
+  width: auto;
+  font-size: 1rem;
+  transform: scale(1.1);
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+.wraper {
+  position: relative;
+  top: 50%;
+  left: 8%;
+}
+.btn:hover{
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.todocontainer{
+  width: 80vw;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todocontainer .heading {
+  font-size: 1.5rem;
+}
+.row {
+  padding: 5px;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  transition: ease all 0.5s;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.row:hover {
+  background-color: #1f2833;
+}
+.todohead,
+#todolist {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.todohead {
+  background-color: #1f2833;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.todoitems {
+  padding: 7px;
+  width: 33%;
+  text-align: center;
+}
+.check {
+  opacity: 0.5;
+  padding: 5px;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  transition: ease all 0.3s;
+  background-color: #1f2833;
+  color: #c5c6c7;
+  text-decoration: line-through;
+}
+
+.ded {
+  transform: translateY(-4rem);
+  opacity: 0;
+}
+
+#copyright {
+  background-color: #0b0c10;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  flex-direction: column;
+  justify-content:end;
+  align-items: center;
+}
+/* footer text */
+.copy {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+#copy {
+  padding: 10px;
+}
+#special {
+  color: violet;
+}
+#special:hover {
+  border-color: violet;
+}
+
