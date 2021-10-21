@@ -166,6 +166,11 @@ function checkmemory(todo){
         initmem = JSON.parse(localStorage.getItem("initmem"));
     }
     const todoIndex = Array.from(todoli.childNodes).indexOf(todo);
-    initmem[todoIndex][2]=1;
+    if(initmem[todoIndex][2]===1){
+        initmem[todoIndex][2]=0;
+    }
+    else{
+        initmem[todoIndex][2]=1;
+    }
     localStorage.setItem("initmem", JSON.stringify(initmem));
 }
