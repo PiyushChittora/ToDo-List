@@ -23,7 +23,8 @@ add.addEventListener("click", () => {
     newdeadline.innerText = deadline.value;
     ro.appendChild(newdeadline);
 
-    savememory(task.value, deadline.value);
+    var x=0;
+    savememory(task.value, deadline.value,x);
     const deletecheck = document.createElement('div');
     deletecheck.classList.add("wraper");
 
@@ -58,7 +59,7 @@ todoli.addEventListener("click", (event) => {
         const item1 = item.parentElement;
         const item2 = item1.parentElement;
         item2.classList.toggle("check");
-        console.log(item2);
+        checkmemory(item2);
     }
 });
 
@@ -89,7 +90,7 @@ filter.addEventListener("click", (e) => {
     });
 })
 
-function savememory(todo, todo2) {
+function savememory(todo, todo2,x) {
     let initmem;
     if (localStorage.getItem("initmem") === null) {
         initmem = [];
@@ -97,7 +98,7 @@ function savememory(todo, todo2) {
     else {
         initmem = JSON.parse(localStorage.getItem("initmem"));
     }
-    initmem.push([todo, todo2]);
+    initmem.push([todo, todo2,x]);
     localStorage.setItem("initmem", JSON.stringify(initmem));
 }
 
@@ -112,6 +113,9 @@ function displaymem() {
     initmem.forEach(function (todo) {
         const ro = document.createElement('div');
         ro.classList.add("row");
+        if(todo[2]===1){
+            ro.classList.add("check");
+        }
 
         const newtask = document.createElement('li');
         newtask.classList.add("todoitems");
@@ -150,5 +154,18 @@ function removememory(todo){
     }
     const todoIndex = Array.from(todoli.childNodes).indexOf(todo);
     initmem.splice(todoIndex, 1);
+    localStorage.setItem("initmem", JSON.stringify(initmem));
+}
+
+function checkmemory(todo){
+    let initmem;
+    if (localStorage.getItem("initmem") === null) {
+        initmem = [];
+    }
+    else {
+        initmem = JSON.parse(localStorage.getItem("initmem"));
+    }
+    const todoIndex = Array.from(todoli.childNodes).indexOf(todo);
+    initmem[todoIndex][2]=1;
     localStorage.setItem("initmem", JSON.stringify(initmem));
 }
