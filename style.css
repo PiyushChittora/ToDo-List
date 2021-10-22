@@ -146,7 +146,7 @@ select{
   transition: ease all 0.3s;
   cursor: pointer;
 }
-.btn-check {
+.btn-check,.btn-edit {
   color: #0b0c10;
   background-color: #66fcf1;
   border-radius: 5px;
@@ -159,10 +159,25 @@ select{
   transition: ease all 0.3s;
   cursor: pointer;
 }
+.btn-edit{
+  width: 6rem;
+}
+.editing{
+  color: #c5c6c7;
+  background-color: #1f2833;
+  border: solid 2px #45a29e;
+  border-radius: 5px;
+  transition: ease all 0.3s;
+}
+.editing:focus{
+  border: solid 2px #0b0c10;
+  background-color: #0b0c10;
+  box-shadow: 0 0 10px #45a29e;
+}
 .wraper {
-  position: relative;
-  top: 50%;
-  left: 8%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 .btn:hover{
   transform: scale(1.1);
