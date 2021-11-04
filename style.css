@@ -153,14 +153,11 @@ select{
   border: none;
   padding: 5px;
   margin: 0 10px;
-  width: auto;
+  width: 4rem;
   font-size: 1rem;
   transform: scale(1.1);
   transition: ease all 0.3s;
   cursor: pointer;
-}
-.btn-edit{
-  width: 6rem;
 }
 .editing{
   color: #c5c6c7;

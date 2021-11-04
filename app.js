@@ -79,7 +79,7 @@ todoli.addEventListener("click", (event) => {
         else{
             item2.firstChild.contentEditable="true";
             item2.firstChild.classList.add("editing");
-            item.innerText="Editing";
+            item.innerText="Save";
         }
         if(item2.childNodes[1].isContentEditable){
             item2.childNodes[1].contentEditable="false";
@@ -90,7 +90,7 @@ todoli.addEventListener("click", (event) => {
         else{
             item2.childNodes[1].contentEditable="true";
             item2.childNodes[1].classList.add("editing");
-            item.innerText="Editing";
+            item.innerText="Save";
         }
     }
 });
